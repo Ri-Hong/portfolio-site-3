@@ -1,33 +1,52 @@
 {
+  "name": "my-website",
+  "version": "0.0.0",
   "private": true,
-  "name": "cara",
-  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
-  "version": "0.2.15",
-  "author": "LekoArts",
-  "license": "0BSD",
-  "starter-name": "gatsby-starter-portfolio-cara",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-cara": "^5.1.4",
-    "gatsby": "^5.12.12",
-    "gatsby-plugin-manifest": "^5.12.3",
-    "gatsby-plugin-webpack-statoscope": "^1.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@docusaurus/core": "3.0.1",
+    "@docusaurus/preset-classic": "3.0.1",
+    "@emotion/react": "^11.11.3",
+    "@mdx-js/react": "^3.0.0",
+    "@react-spring/parallax": "^9.7.3",
+    "@theme-ui/preset-tailwind": "^0.16.1",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "theme-ui": "^0.16.1"
   },
   "devDependencies": {
-    "@types/node": "^18.19.3",
-    "@types/react": "^18.2.42",
-    "@types/react-dom": "^18.2.17",
-    "cross-env": "^7.0.3",
-    "typescript": "^5.3.3"
+    "@docusaurus/module-type-aliases": "3.0.1",
+    "@docusaurus/tsconfig": "3.0.1",
+    "@docusaurus/types": "3.0.1",
+    "@types/mdx": "^2.0.10",
+    "typescript": "~5.2.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
   }
 }
