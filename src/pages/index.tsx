@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -16,6 +17,7 @@ import Hero from "../components/hero";
 import Projects from "../components/projects";
 import About from "../components/about";
 import Contact from "../components/contact";
+import ThemeWatcher from "../components/theme-watcher";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -41,12 +43,14 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <ThemeUIProvider theme={theme}>
       <Layout
         title={`Hello from ${siteConfig.title}`}
         description="Description will go into a meta tag in <head />"
       >
+        <ThemeWatcher />
         <ParallaxLayout>
           <Parallax pages={5}>
             <Hero offset={0} factor={1} />
