@@ -1,18 +1,31 @@
 /** @jsxImportSource theme-ui */
 
 type ProjectCardProps = {
-  link: string
-  title: string
-  children: React.ReactNode
-  bg: string
-}
+  link: string;
+  title: string;
+  children: React.ReactNode;
+  bg: string;
+  image: string;
+  tags: string[];
+};
+const baseURL = "/project-images/"; // Adjust according to your folder structure
 
-const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
+const ProjectCard = ({
+  link,
+  title,
+  children,
+  bg,
+  image,
+  tags
+}: ProjectCardProps) => (
   <a
     href={link}
     target="_blank"
     rel="noreferrer noopener"
     sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
       width: `100%`,
       boxShadow: `lg`,
       position: `relative`,
@@ -30,33 +43,65 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
       },
     }}
   >
-    <div
+    {/* Image */}
+    <img
+      src={`${baseURL}${image}`}
+      alt={title}
       sx={{
-        opacity: 0.85,
-        textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
-        p: {
-          fontSize: [1, 2],
-          color: `white`,
-          margin: 0,
-          lineHeight: 1.25,
-        },
+        width: `100%`,
+        height: `auto`,
+        borderRadius: `lg`,
       }}
-    >
-      {children}
+    />
+
+    {/* Title and Description */}
+    <div sx={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
+      <div
+        sx={{
+          textTransform: `uppercase`,
+          letterSpacing: `wide`,
+          pt: 4,
+          pb: 2,
+          fontSize: [3, 4, 5],
+          fontWeight: `medium`,
+          lineHeight: 1.125,
+        }}
+      >
+        {title}
+      </div>
+
+      <div
+        sx={{
+          opacity: 0.85,
+          textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
+          p: {
+            fontSize: [1, 2],
+            color: `white`,
+            margin: 0,
+            lineHeight: 1.25,
+          },
+        }}
+      >
+        {children}
+      </div>
     </div>
-    <div
-      sx={{
-        textTransform: `uppercase`,
-        letterSpacing: `wide`,
-        pt: 4,
-        fontSize: [3, 4, 5],
-        fontWeight: `medium`,
-        lineHeight: 1.125,
-      }}
-    >
-      {title}
+
+    {/* Tags */}
+    <div sx={{ mt: 4 }}>
+      {tags.map((tag) => (
+        <span
+          key={tag}
+          sx={{
+            mr: 2,
+            fontSize: [1, 2],
+            color: `white`,
+          }}
+        >
+          {tag}
+        </span>
+      ))}
     </div>
   </a>
-)
+);
 
-export default ProjectCard
+export default ProjectCard;

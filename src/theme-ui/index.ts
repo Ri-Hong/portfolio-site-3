@@ -169,7 +169,7 @@ const theme = merge(tailwind, {
     bottom: 0,
     color: `textMuted`,
     px: [2, 3],
-    py: [3, 4],
+    // py: [3, 4],
   },
   texts: {
     bigger: {
