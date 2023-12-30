@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -12,12 +11,12 @@ import theme from "../theme-ui/index"; // Your theme file
 
 import { Parallax } from "@react-spring/parallax";
 import ParallaxLayout from "../components/parallax-layout";
-import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Projects from "../components/projects";
 import About from "../components/about";
-import Contact from "../components/contact";
+import BottomContent from "../components/bottom-content";
 import ThemeWatcher from "../components/theme-watcher";
+import Experience from "../components/experience";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -52,13 +51,17 @@ export default function Home(): JSX.Element {
       >
         <ThemeWatcher />
         <ParallaxLayout>
-          <Parallax pages={5}>
+          <Parallax pages={6}>
             <Hero offset={0} factor={1} />
             <Projects offset={1} factor={2} />
-            <About offset={3} factor={1} />
-            <Contact offset={4} factor={1} />
+            <Experience offset={3} factor={2} />
+
+            {/* <About offset={5} factor={1} /> */}
+            {/* <Contact offset={6} factor={1} /> */}
+            <BottomContent offset={5} factor={1}/>
           </Parallax>
         </ParallaxLayout>
+
         {/* <HomepageHeader />
       <main>
         <HomepageFeatures />

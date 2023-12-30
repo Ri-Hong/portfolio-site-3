@@ -1,5 +1,6 @@
 import * as React from "react"
 import ProjectCard from "./project-card"
+import ExperienceCard from "./experience-card"
 
 const MdxComponents = {
   ProjectCard: ({ link, title, bg, children, ...props }: any) => (
@@ -7,6 +8,13 @@ const MdxComponents = {
       {children}
     </ProjectCard>
   ),
+  ExperienceCard: ({ company, position, date, bg, image, children, ...props }: any) => (
+    <ExperienceCard {...props} company={company} position={position} date={date} bg={bg}>
+      {children}
+    </ExperienceCard>
+  ),
 }
 
 export default MdxComponents
+
+
