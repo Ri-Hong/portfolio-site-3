@@ -8,7 +8,7 @@ const MdxComponents = {
       {children}
     </ProjectCard>
   ),
-  ExperienceCard: ({ company, position, date, bg, image, children, ...props }: any) => (
+  ExperienceCard: ({ company, position, date, bg, children, ...props }: any) => (
     <ExperienceCard {...props} company={company} position={position} date={date} bg={bg}>
       {children}
     </ExperienceCard>

@@ -53,7 +53,7 @@ type ExperienceCardProps = {
           borderRadius: `lg`,
         }}
       />
-  
+      
       {/* Company and Description */}
       <div sx={{ flex: '1', display: 'flex', flexDirection: 'column' }}>
         <div

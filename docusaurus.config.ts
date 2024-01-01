@@ -53,10 +53,10 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Ri Hong',
-      logo: {
-        alt: 'Ri Hong Logo',
-        src: 'img/logo.svg',
-      },
+      // logo: {
+      //   alt: 'Ri Hong Logo',
+      //   src: 'img/logo.svg',
+      // },
       items: [
         {to: '/blog', label: 'Blog', position: 'right'},
         {
