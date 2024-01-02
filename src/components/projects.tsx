@@ -32,6 +32,8 @@ const Projects = ({
       <h2
         sx={{
           mb: 5,
+          width: [`full`, `full`, `full`, `full`, `full`, `2/3`],
+          textAlign: `left`,
         }}
       >
         Projects

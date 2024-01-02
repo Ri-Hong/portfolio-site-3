@@ -75,6 +75,15 @@ const BottomContent = ({
       offset={offset}
       factor={factor}
     >
+      <h2
+        sx={{
+          mb: 5,
+          width: [`full`, `full`, `full`, `full`, `full`, `2/3`],
+          textAlign: `left`,
+        }}
+      >
+        About
+      </h2>
       <Inner sx={{ mb: [5, 6, 7] }}>
         <AboutMDX />
       </Inner>
@@ -108,13 +117,7 @@ const BottomContent = ({
           left="95%"
           top="0%"
         />
-        <Svg
-          icon="circle"
-          width={6}
-          color="icon_orange"
-          left="85%"
-          top="15%"
-        />
+        <Svg icon="circle" width={6} color="icon_orange" left="85%" top="15%" />
         <Svg
           icon="upDown"
           hiddenMobile
