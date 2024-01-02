@@ -19,6 +19,8 @@ const Footer = () => {
           display: `flex`,
           justifyContent: `space-between`,
           width: `100vw`,
+          marginBottom: `3.5rem`
+
         }}
       >
         <div
@@ -28,7 +30,7 @@ const Footer = () => {
             height: `auto`,
           }}
         >
-          <h1>Ri Hong</h1>
+          <h1 sx={{marginBottom: 2}}>Ri Hong</h1>
           <p sx={{}}>riri.hong@gmail.com</p>
         </div>
         <div

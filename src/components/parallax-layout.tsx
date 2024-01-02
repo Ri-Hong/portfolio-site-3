@@ -1,3 +1,5 @@
+/** @jsxImportSource theme-ui */
+
 import * as React from "react"
 import { get } from "theme-ui"
 import { MDXProvider } from "@mdx-js/react"

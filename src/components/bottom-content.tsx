@@ -29,7 +29,7 @@ const BottomContent = ({
       <div
         sx={{
           position: `absolute`,
-          bottom: 0,
+          bottom: `2.75rem`,
           width: `full`,
           transform: `matrix(1, 0, 0, -1, 0, 0)`,
         }}

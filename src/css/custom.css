@@ -31,4 +31,15 @@
 
 .navbar__brand {
   font-size: 1.3rem;
+  height: 2.75rem;
+}
+
+
+body, html {
+  overflow: hidden;
+}
+
+.footer-spacer {
+  height: 2.75rem;
+  border: 3px solid blue;
 }

@@ -60,6 +60,12 @@ const config: Config = {
       items: [
         {to: '/blog', label: 'Blog', position: 'right'},
         {
+          to: '/resume.pdf', // URL to your resume
+          label: 'Resume',
+          position: 'right',
+          target: '_blank', // Optional: Opens the resume in a new tab
+        },
+        {
           href: 'https://github.com/Ri-Hong',
           label: 'GitHub',
           position: 'right',
