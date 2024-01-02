@@ -40,6 +40,7 @@ const Projects = ({
         <div
           sx={{
             display: `grid`,
+            border: `solid 1px red`,
             gridGap: [4, 4, 4, 5], // adjust your grid gap as needed
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`], // set up the columns
             "> *:nth-of-type(even)": {

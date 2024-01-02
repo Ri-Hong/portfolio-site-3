@@ -6,7 +6,7 @@ type InnerProps = {
 }
 
 const Inner = ({ className = ``, children }: InnerProps) => (
-  <div sx={{ width: [`full`, `full`, `full`, `full`, `full`, `2/3`], textAlign: `left` }} className={className}>
+  <div sx={{ width: [`full`, `full`, `full`, `full`, `full`, `full`], textAlign: `left`, border: `3px solid green` }} className={className}>
     {children}
   </div>
 )

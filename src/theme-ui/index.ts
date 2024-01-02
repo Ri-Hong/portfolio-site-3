@@ -35,6 +35,19 @@ const theme = merge(tailwind, {
     76, // index 8 // set
     76, // index 9
   ],
+  // space: [
+  //   0,    // index 0
+  //   4,    // index 1
+  //   8,    // index 2
+  //   12,   // index 3
+  //   16,   // index 4
+  //   500,   // index 5
+  //   24,   // index 6
+  //   28,   // index 7
+  //   32,   // index 8
+  //   36,   // index 9
+  //   // ... more values as needed
+  // ],
   colors: {
     primary: tailwind.colors.orange[4],
     secondary: tailwind.colors.indigo[6],
