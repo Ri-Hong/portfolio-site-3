@@ -1,3 +1,4 @@
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -27,6 +28,31 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar__inner {
+  width: 100%; /* default to smallest breakpoint */
+  margin: auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 900px) {
+  .navbar__inner {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navbar__inner {
+    width: 66.6667%;
+    padding: 0 2rem;
+  }
+}
+
+
+.navbar__inner {
+  /* border: 3px solid red; */
 }
 
 .navbar__brand {

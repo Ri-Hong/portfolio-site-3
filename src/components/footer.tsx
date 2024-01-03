@@ -19,7 +19,7 @@ const Footer = () => {
           display: `flex`,
           justifyContent: `space-between`,
           width: `100vw`,
-          marginBottom: `3.5rem`
+          marginBottom: `4.5rem`
 
         }}
       >
