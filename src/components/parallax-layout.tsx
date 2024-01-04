@@ -31,7 +31,7 @@ const ParallaxLayout = ({ children, className = `` }: LayoutProps) => (
       })}
     />
     <MDXProvider components={MdxComponents}>
-      <main className={className}>{children}</main>
+      <main sx={{  marginTop: `-3.75rem` }} className={className}>{children}</main>
     </MDXProvider>
   </React.Fragment>
 )

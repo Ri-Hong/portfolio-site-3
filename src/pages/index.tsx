@@ -11,12 +11,15 @@ import theme from "../theme-ui/index"; // Your theme file
 
 import { Parallax } from "@react-spring/parallax";
 import ParallaxLayout from "../components/parallax-layout";
+import ThemeWatcher from "../components/theme-watcher";
+import ConditionalScrollbar from "../components/conditional-scrollbar";
+
 import Hero from "../components/hero";
 import Projects from "../components/projects";
-import About from "../components/about";
 import BottomContent from "../components/bottom-content";
-import ThemeWatcher from "../components/theme-watcher";
+
 import Experience from "../components/experience";
+import Hackathons from "../components/hackathons";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -50,11 +53,13 @@ export default function Home(): JSX.Element {
         description="Description will go into a meta tag in <head />"
       >
         <ThemeWatcher />
+        <ConditionalScrollbar />
         <ParallaxLayout>
-          <Parallax pages={6}>
+          <Parallax pages={6} className={"parallax"}>
             <Hero offset={0} factor={1} />
             <Projects offset={1} factor={2} />
             <Experience offset={3} factor={2} />
+            <Hackathons offset={4} factor={1} />
 
             {/* <About offset={5} factor={1} /> */}
             {/* <Contact offset={6} factor={1} /> */}

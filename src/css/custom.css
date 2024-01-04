@@ -31,6 +31,17 @@
 }
 
 
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s;
+  height: 3.75rem;
+}
+
+.navbar.scrolled {
+  background-color: #fff; /* or any other solid color */
+}
+
+
 .navbar__inner {
   width: 100%; /* default to smallest breakpoint */
   margin: auto;
@@ -58,14 +69,4 @@
 .navbar__brand {
   font-size: 1.3rem;
   height: 2.75rem;
-}
-
-
-body, html {
-  overflow: hidden;
-}
-
-.footer-spacer {
-  height: 2.75rem;
-  border: 3px solid blue;
 }

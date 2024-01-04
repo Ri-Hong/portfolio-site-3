@@ -19,14 +19,15 @@ const Experience = ({
       bg="divider"
       clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
       speed={0.2}
-      offset={offset}
+      offset={offset - 0.1}
       factor={factor}
     />
 
     <Content
       sx={{ variant: `texts.big` }}
       speed={0.4}
-      offset={offset + 0.2}
+      offset={offset - 0.1}
+
       factor={factor}
     >
       <h2
@@ -58,7 +59,7 @@ const Experience = ({
         </div>
       </Inner>
     </Content>
-    <Divider speed={0.1} offset={offset} factor={factor}>
+    <Divider speed={0.1} offset={offset - 0.1} factor={factor}>
       <UpDown>
         <Svg icon="box" width={6} color="icon_pink" left="60%" top="90%" />
         <Svg icon="upDown" width={8} color="icon_yellow" left="30%" top="15%" />
