@@ -26,7 +26,7 @@ const Hackathons = ({
     <Content
       sx={{ variant: `texts.big` }}
       speed={0.4}
-      offset={offset + 0.2}
+      offset={offset + 0.3}
       factor={factor}
     >
       <h2
@@ -69,8 +69,8 @@ const Hackathons = ({
           hiddenMobile
           width={16}
           color="icon_green"
-          left="20%"
-          top="90%"
+          left="40%"
+          top="80%"
         />
         <Svg
           icon="triangle"

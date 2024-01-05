@@ -93,7 +93,7 @@ const ProjectCard = ({
         <span
           key={tag}
           sx={{
-            mr: 2,
+            mr: 3,
             fontSize: [1, 2],
             color: `white`,
           }}

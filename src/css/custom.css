@@ -33,12 +33,14 @@
 
 .navbar {
   background-color: transparent;
-  transition: background-color 0.3s;
+  transition: background-color 0.1s;
   height: 3.75rem;
+  border: none;
+  box-shadow: none;
 }
 
 .navbar.scrolled {
-  background-color: #fff; /* or any other solid color */
+  background-color: #141821; /* or any other solid color */
 }
 
 

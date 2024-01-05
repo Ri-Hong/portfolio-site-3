@@ -42,15 +42,14 @@ const Projects = ({
         <div
           sx={{
             display: `grid`,
-            border: `solid 1px red`,
             gridGap: [4, 4, 4, 5], // adjust your grid gap as needed
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`], // set up the columns
             "> *:nth-of-type(even)": {
-              // this targets all direct children of the div
-              transform: "translateY(50px)", // adjust the Y value to center the row
-              "&:hover": {
-              //   // Adjust the hover transform for even cards
-                transform: `translateY(40px)`, // 50px - 10px
+              "@media screen and (min-width: 600px)": { // This is the media query for non-mobile devices
+                transform: "translateY(50px)",
+                "&:hover": {
+                  transform: `translateY(40px)`,
+                },
               },
             },
           }}

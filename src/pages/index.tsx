@@ -55,15 +55,15 @@ export default function Home(): JSX.Element {
         <ThemeWatcher />
         <ConditionalScrollbar />
         <ParallaxLayout>
-          <Parallax pages={6} className={"parallax"}>
+          <Parallax pages={7} className={"parallax"}>
             <Hero offset={0} factor={1} />
             <Projects offset={1} factor={2} />
             <Experience offset={3} factor={2} />
-            <Hackathons offset={4} factor={1} />
+            <Hackathons offset={4} factor={2} />
 
             {/* <About offset={5} factor={1} /> */}
             {/* <Contact offset={6} factor={1} /> */}
-            <BottomContent offset={5} factor={1}/>
+            <BottomContent offset={6} factor={1}/>
           </Parallax>
         </ParallaxLayout>
 

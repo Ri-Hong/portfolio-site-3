@@ -19,8 +19,6 @@ const Footer = () => {
           display: `flex`,
           justifyContent: `space-between`,
           width: `100vw`,
-          marginBottom: `4.5rem`
-
         }}
       >
         <div
