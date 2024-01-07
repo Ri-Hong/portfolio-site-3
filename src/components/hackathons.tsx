@@ -38,7 +38,7 @@ const Hackathons = ({
       >
         Hackathons
       </h2>
-      <Inner sx={{ mb: [5, 6, 7] }}>
+      <Inner sx={{ mb: [5, 6, 7]}}>
         <HackathonsMDX />
       </Inner>
     </Content>

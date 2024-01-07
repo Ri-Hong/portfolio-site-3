@@ -8,8 +8,6 @@ const ConditionalScrollbar = () => {
     const parallaxContainer = document.querySelector(".parallax"); // replace with your container's selector
 
     const handleScroll = () => {
-      console.log(parallaxContainer.scrollTop); // Logging the scroll position of the container
-
       const navbar = document.querySelector(".navbar");
       if (parallaxContainer.scrollTop > 300) { // Adjust this threshold as needed
         navbar.classList.add("scrolled");
