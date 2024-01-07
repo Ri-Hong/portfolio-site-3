@@ -108,7 +108,7 @@ const theme = merge(tailwind, {
         fontFamily: `monospace`,
         fontSize: `1em`,
       },
-      table: {
+      tbody: {
         backgroundColor: `rgba(150, 150, 150, 0.2)`
       },
     },
