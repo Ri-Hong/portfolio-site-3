@@ -110,7 +110,7 @@ const ExperienceCard = ({
     </div>
 
     {/* Tags */}
-    <div sx={{ mt: 4 }}>
+    <div sx={{ mt: 2 }}>
       {techstackTags.map((tag) => (
         <span
           key={tag}

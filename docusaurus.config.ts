@@ -58,7 +58,8 @@ const config: Config = {
       //   src: 'img/logo.svg',
       // },
       items: [
-        {to: '/blog', label: 'Blog', position: 'right'},
+        // REENABLE WHEN BLOG IS READY
+        // {to: '/blog', label: 'Blog', position: 'right'},
         {
           to: '/resume.pdf', // URL to your resume
           label: 'Resume',

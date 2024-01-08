@@ -45,14 +45,15 @@ const Experience = ({
             display: `grid`,
             gridGap: [4, 4, 4, 5], // adjust your grid gap as needed
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`], // set up the columns
-            "> *:nth-of-type(odd)": {
-              "@media screen and (min-width: 600px)": { // This is the media query for non-mobile devices
-                transform: "translateY(50px)",
-                "&:hover": {
-                  transform: `translateY(40px)`,
-                },
-              },
-            },
+            // "> *:nth-of-type(odd)": {
+            //   "@media screen and (min-width: 600px)": { // This is the media query for non-mobile devices
+            //     transform: "translateY(50px)",
+            //     "&:hover": {
+            //       transform: `translateY(40px)`,
+            //     },
+            //   },
+            // },
+            // ENABLE THE ABOVE WHEN THERE IS MROE THAN 1 EXPERIENCE CARD
           }}
         >
           <ExperienceMDX />
