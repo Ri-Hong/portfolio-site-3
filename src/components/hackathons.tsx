@@ -17,7 +17,7 @@ const Hackathons = ({
   <div>
     <Divider
       bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
-      sx={{ clipPath: `polygon(0 15%, 100% 25%, 100% 85%, 0 75%)`, border: `3px solid blue` }}
+      sx={{ clipPath: `polygon(0 15%, 100% 25%, 100% 85%, 0 75%)` }}
       speed={-0.2}
       offset={offset + 0.05}
       factor={factor}
@@ -55,10 +55,10 @@ const Hackathons = ({
           top="5%"
         />
         <Svg
-          icon="circle"
+          icon="box"
           hiddenMobile
-          width={24}
-          color="icon_brightest"
+          width={8}
+          color="icon_orange"
           left="17%"
           top="60%"
         />

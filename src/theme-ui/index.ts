@@ -24,10 +24,10 @@ const theme = merge(tailwind, {
   //   72, // index 8
   // ],
   fontSizes: [
-    12, // index 0
-    14, // index 1
+    14, // index 0
+    16, // index 1
     20, // index 2 // set
-    18, // index 3
+    22, // index 3
     30, // index 4 // set
     32, // index 5 // set
     48, // index 6
@@ -109,7 +109,7 @@ const theme = merge(tailwind, {
         fontSize: `1em`,
       },
       tbody: {
-        backgroundColor: `rgba(150, 150, 150, 0.2)`
+        backgroundColor: `rgba(100, 100, 100, 0)` // Disabled for now
       },
     },
     p: {
@@ -203,6 +203,14 @@ const theme = merge(tailwind, {
       p: {
         fontSize: [1, 2],
       }
+    },
+    small: {
+      p: {
+        fontSize: [0, 0, 1, 1, 3],
+      },
+      h2: {
+        fontSize: [4, 5, 6],
+      },
     },
   },
 })

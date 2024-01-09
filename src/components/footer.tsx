@@ -5,9 +5,12 @@ import { SiGithub, SiDevpost, SiLinkedin, SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <Box as="footer" variant="footer" sx={{ zIndex:100,
-  }}>
-      {/* Copyright &copy; {new Date().getFullYear()}. All rights reserved. */}
+    <Box
+      as="footer"
+      variant="footer"
+      sx={{ zIndex: 100, paddingLeft: [3, 4, 4, 5], paddingRight: [3, 4, 4, 5], width: `100%`
+    }}
+    >
       <br />
       <Flex
         sx={{
@@ -18,26 +21,32 @@ const Footer = () => {
           a: { color: `text` },
           display: `flex`,
           justifyContent: `space-between`,
-          width: `100vw`,
+          width: `100%`,
+          // border: `3px solid red`
         }}
       >
         <div
           sx={{
             textAlign: `left`,
-            marginLeft: 4,
+            // marginLeft: 4,
             height: `auto`,
           }}
         >
-          <h1 sx={{marginBottom: 2}}>Ri Hong</h1>
-          <p sx={{}}>riri.hong@gmail.com</p>
+          <h1 sx={{ marginBottom: 2 }}>Ri Hong</h1>
+          <p sx={{ fontSize: `1rem` }}>riri.hong@gmail.com</p>
         </div>
         <div
           sx={{
-            marginRight: 4, // Add space between icons
 
+            display: `flex`,
+            // border: `3px solid green`,
+            flexDirection: `row`,
+            justifyContent: `space-between`,
+            gap: `1.5rem`,
+            marginTop: 4,
             "a > svg": {
               fontSize: 5,
-              marginRight: 4, // Add space between icons
+              // marginRight: 4, // Add space between icons
               "&:hover": {
                 color: "primary",
                 cursor: "pointer",
@@ -46,11 +55,7 @@ const Footer = () => {
             },
           }}
         >
-          <a
-            href="https://github.com/Ri-Hong"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://github.com/Ri-Hong" target="_blank" rel="noreferrer">
             <SiGithub />
           </a>
           <a
