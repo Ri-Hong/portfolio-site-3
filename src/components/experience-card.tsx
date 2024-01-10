@@ -76,7 +76,7 @@ const ExperienceCard = ({
       {/* Position */}
       <div
         sx={{
-          fontSize: [2, 3, 3],
+          fontSize: [0, 3, 3],
           fontWeight: `medium`,
           lineHeight: 1.125,
           pb: 2,
@@ -88,8 +88,8 @@ const ExperienceCard = ({
 
       <div sx={{display: `flex`, flexDirection: `row`, gap: 3, pt: 1}}>
         {/* Date and Location */}
-        <div sx={{fontSize: 1, padding: 2, pl: 3, pr: 3, border: `1px solid white`, borderRadius: `20px`}}>{date}</div>
-        <div sx={{fontSize: 1, padding: 2, pl: 3, pr: 3, border: `1px solid white`, borderRadius: `20px`}}>{location}</div>
+        <div sx={{fontSize: `0.8rem`, padding: 2, pl: 3, pr: 3, border: `1px solid white`, borderRadius: `20px`}}>{date}</div>
+        <div sx={{fontSize: `0.8rem`, padding: 2, pl: 3, pr: 3, border: `1px solid white`, borderRadius: `20px`}}>{location}</div>
       </div>
 
       <div

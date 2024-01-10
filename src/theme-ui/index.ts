@@ -24,10 +24,10 @@ const theme = merge(tailwind, {
   //   72, // index 8
   // ],
   fontSizes: [
-    14, // index 0
-    16, // index 1
+    14, // index 0 // set for about
+    16, // index 1 // set for about
     20, // index 2 // set
-    22, // index 3
+    20, // index 3 // set for about
     30, // index 4 // set
     32, // index 5 // set
     48, // index 6
