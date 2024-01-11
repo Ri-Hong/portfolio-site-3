@@ -11,16 +11,30 @@ import AboutMDX from "../sections/about.mdx";
 
 const BottomContent = ({ offset, factor = 1 }) => {
   const [svgHeight, setSvgHeight] = useState(538.05);
+  const [svgWidth, setSvgWidth] = useState(800);
 
   // Used for resizing the wave svg
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
-        setSvgHeight(538.05);
-      } else {
-        setSvgHeight(400);
+        setSvgHeight(250);
+        setSvgWidth(400);
+      } else if (window.innerWidth >= 600 && window.innerWidth < 1200) {
+        setSvgHeight(275);
+        setSvgWidth(400);
+      } else if (window.innerWidth > 1200 && window.innerWidth < 1600) {
+        setSvgHeight(270);
+        setSvgWidth(400);
+      } else if (window.innerWidth > 1600 && window.innerWidth < 2000) {
+        setSvgHeight(270);
+        setSvgWidth(400);
+      } else if (window.innerWidth > 2000) {
+        setSvgHeight(250);
+        setSvgWidth(400);
+      } else if (window.innerWidth > 2400) {
+        setSvgHeight(650);
+        setSvgWidth(400);
       }
-      console.log(svgHeight);
     };
 
     // Set up resize listener
@@ -65,16 +79,16 @@ const BottomContent = ({ offset, factor = 1 }) => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               id="contact-wave"
-              viewBox={`0 0 800 ${svgHeight}`}
+              viewBox={`0 0 ${svgWidth} ${svgHeight}`}
               preserveAspectRatio="none"
               style={{ transform: "scaleX(-1)" }}
             >
               <path>
                 <animate
                   attributeName="d"
-                  values="M 0 100 Q 250 300 400 200 Q 550 100 800 300 L 800 0 L 0 0 L 0 100 Z;
-              M 0 100 Q 250 100 400 200 Q 550 300 800 100 L 800 0 L 0 0 L 0 100 Z;
-              M 0 100 Q 250 300 400 200 Q 550 100 800 300 L 800 0 L 0 0 L 0 100 Z"
+                  values="M 0 158 Q 248 246 400 200 Q 551 142 801 219 L 800 0 L 0 0 L 0 158 Z;
+                  M 0 168 Q 250 143 400 200 Q 548 260 801 193 L 800 0 L 0 0 L -1 167 Z;
+                  M 0 158 Q 248 246 400 200 Q 551 142 801 219 L 800 0 L 0 0 L 0 158 Z"
                   repeatCount="indefinite"
                   dur="30s"
                 />
@@ -96,7 +110,7 @@ const BottomContent = ({ offset, factor = 1 }) => {
       >
         <h2
           sx={{
-            mb: 5,
+            mb: [4, 4, 4, 5],
             width: [`full`, `full`, `full`, `full`, `full`, `2/3`],
             textAlign: `left`,
           }}

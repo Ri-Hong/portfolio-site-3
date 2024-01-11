@@ -1,11 +1,6 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import Heading from "@theme/Heading";
 
-import styles from "./index.module.css";
 import { ThemeUIProvider } from "theme-ui";
 import theme from "../theme-ui/index"; // Your theme file
 
@@ -21,30 +16,10 @@ import BottomContent from "../components/bottom-content";
 import Experience from "../components/experience";
 import Hackathons from "../components/hackathons";
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-          >
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <ThemeUIProvider theme={theme}>
@@ -55,22 +30,15 @@ export default function Home(): JSX.Element {
         <ThemeWatcher />
         <ConditionalScrollbar />
         <ParallaxLayout>
-          <Parallax pages={7} className={"parallax"}>
+          <Parallax pages={isMobile ? 8.2 : 7} className={"parallax"}>
             <Hero offset={0} factor={1} />
-            <Projects offset={1} factor={2} />
-            <Experience offset={3} factor={2} />
-            <Hackathons offset={4} factor={2} />
-
-            {/* <About offset={5} factor={1} /> */}
-            {/* <Contact offset={6} factor={1} /> */}
-            <BottomContent offset={6} factor={1}/>
+            <Projects offset={1} factor={isMobile ? 3 : 2} />
+            <Experience offset={isMobile ? 4 : 3} factor={2} />
+            <Hackathons offset={isMobile ? 5 : 4} factor={2} />
+            <BottomContent offset={isMobile ? 7 : 6} factor={isMobile ? 1.2 : 1}/>
           </Parallax>
         </ParallaxLayout>
 
-        {/* <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main> */}
       </Layout>
     </ThemeUIProvider>
   );

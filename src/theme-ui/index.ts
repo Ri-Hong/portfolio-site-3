@@ -27,7 +27,7 @@ const theme = merge(tailwind, {
     14, // index 0 // set for about
     16, // index 1 // set for about
     20, // index 2 // set
-    20, // index 3 // set for about
+    24, // index 3 // set for footer
     30, // index 4 // set
     32, // index 5 // set
     48, // index 6
@@ -206,7 +206,7 @@ const theme = merge(tailwind, {
     },
     small: {
       p: {
-        fontSize: [0, 0, 1, 1, 3],
+        fontSize: [0, 0, 1, 1, 2],
       },
       h2: {
         fontSize: [4, 5, 6],

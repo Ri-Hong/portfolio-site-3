@@ -32,7 +32,7 @@ const Experience = ({
     >
       <h2
         sx={{
-          mb: 5,
+          mb: [4, 4, 4, 5],
           width: [`full`, `full`, `full`, `full`, `full`, `2/3`],
           textAlign: `left`,
         }}

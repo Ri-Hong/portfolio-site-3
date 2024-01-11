@@ -31,7 +31,7 @@ const Projects = ({
     >
       <h2
         sx={{
-          mb: 5,
+          mb: [4, 4, 4, 5],
           width: [`full`, `full`, `full`, `full`, `full`, `2/3`],
           textAlign: `left`,
         }}
@@ -63,12 +63,11 @@ const Projects = ({
         <Svg icon="box" width={6} color="icon_brightest" left="85%" top="75%" />
         <Svg icon="upDown" width={8} color="icon_teal" left="70%" top="20%" />
         <Svg
-          icon="triangle"
-          width={8}
-          stroke
-          color="icon_orange"
+          icon="circle"
+          width={16}
+          color="icon_green"
           left="25%"
-          top="5%"
+          top="0%"
         />
         <Svg
           icon="circle"

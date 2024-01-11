@@ -15,37 +15,34 @@ const Footer = () => {
       <Flex
         sx={{
           alignItems: `center`,
-          mb: 3,
+          mb: [3, 3, 4],
           color: `text`,
           fontWeight: `semibold`,
           a: { color: `text` },
           display: `flex`,
           justifyContent: `space-between`,
           width: `100%`,
-          // border: `3px solid red`
         }}
       >
         <div
           sx={{
             textAlign: `left`,
             // marginLeft: 4,
-            height: `auto`,
+            margin: 0
           }}
         >
-          <h1 sx={{ marginBottom: 2 }}>Ri Hong</h1>
-          <p sx={{ fontSize: `1rem` }}>riri.hong@gmail.com</p>
+          <h1 sx={{ marginBottom: 2, fontSize: [3, 4] }}>Ri Hong</h1>
+          <p sx={{ fontSize: [0, 1], margin: 0}}>riri.hong@gmail.com</p>
         </div>
         <div
           sx={{
-
             display: `flex`,
-            // border: `3px solid green`,
             flexDirection: `row`,
             justifyContent: `space-between`,
             gap: `1.5rem`,
-            marginTop: 4,
+            marginTop: 2,
             "a > svg": {
-              fontSize: 5,
+              fontSize: [3, 4, 5],
               // marginRight: 4, // Add space between icons
               "&:hover": {
                 color: "primary",
@@ -80,6 +77,7 @@ const Footer = () => {
             <SiLeetcode />
           </a>
         </div>
+
       </Flex>
     </Box>
   );
