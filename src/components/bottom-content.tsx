@@ -28,12 +28,13 @@ const BottomContent = ({ offset, factor = 1 }) => {
       } else if (window.innerWidth > 1600 && window.innerWidth < 2000) {
         setSvgHeight(270);
         setSvgWidth(400);
-      } else if (window.innerWidth > 2000) {
+      } else if (window.innerWidth > 2000 && window.innerWidth < 2400) {
         setSvgHeight(250);
         setSvgWidth(400);
       } else if (window.innerWidth > 2400) {
-        setSvgHeight(650);
+        setSvgHeight(400);
         setSvgWidth(400);
+        console.log("here");
       }
     };
 
