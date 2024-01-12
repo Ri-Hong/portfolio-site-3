@@ -1,12 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "@docusaurus/router";
 
 const ConditionalScrollbar = () => {
   const location = useLocation();
+  const [parallaxContainer, setParallaxContainer] = useState(null);
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      const parallax = document.querySelector(".parallax");
+      if (parallax) {
+        setParallaxContainer(parallax);
+        clearInterval(interval);
+      }
+    }, 100); // checks every 100ms
+  
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (!parallaxContainer) return;
+
     // Because we need the navbar to be transparent on the homepage AND the blog page, we need to target different compoenents. The blog page doesn't have a parallax container
-    const parallaxContainer = document.querySelector(".parallax"); // replace with your container's selector
     const scrollContainer = document.documentElement; // Targets the html tag
     const navbar = document.querySelector(".navbar");
 
@@ -19,7 +33,6 @@ const ConditionalScrollbar = () => {
     };
 
     const handleScrollBlogPage = () => {
-      console.log(scrollContainer.scrollTop)
       if (scrollContainer.scrollTop > 350) { // Adjust this threshold as needed
         navbar.classList.add("scrolled");
       } else {
@@ -45,7 +58,7 @@ const ConditionalScrollbar = () => {
         scrollContainer.removeEventListener("scroll", handleScrollBlogPage);
       }
     };
-  }, [location.pathname]); // Dependency array
+  }, [parallaxContainer, location.pathname]); // Dependency array
 
   return null; // This component does not render anything
 };

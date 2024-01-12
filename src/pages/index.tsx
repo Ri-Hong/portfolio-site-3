@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
@@ -20,10 +21,24 @@ import Hackathons from "../components/hackathons";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    // Set up resize listener
+    window.addEventListener('resize', handleResize);
+
+    // Call the handler to set initial value
+    handleResize();
+
+    // Cleanup on unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, [window.innerWidth]);
+
   // Define a function for the main content which needs the window object
   const MainContent = () => {
-    const isMobile = window.innerWidth <= 768;
-
     return (
       <ParallaxLayout>
         <Parallax pages={isMobile ? 8.2 : 7} className={"parallax"}>

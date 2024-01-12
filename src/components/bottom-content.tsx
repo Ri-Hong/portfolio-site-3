@@ -34,7 +34,6 @@ const BottomContent = ({ offset, factor = 1 }) => {
       } else if (window.innerWidth > 2400) {
         setSvgHeight(400);
         setSvgWidth(400);
-        console.log("here");
       }
     };
 
