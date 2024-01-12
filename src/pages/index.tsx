@@ -21,7 +21,7 @@ import Hackathons from "../components/hackathons";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false); // Initialize with a default value
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,7 +35,7 @@ export default function Home(): JSX.Element {
 
     // Cleanup on unmount
     return () => window.removeEventListener('resize', handleResize);
-  }, [window.innerWidth]);
+  }, []);
 
   // Define a function for the main content which needs the window object
   const MainContent = () => {

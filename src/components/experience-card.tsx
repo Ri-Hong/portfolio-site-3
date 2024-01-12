@@ -51,6 +51,7 @@ const ExperienceCard = ({
       alt={company}
       sx={{
         width: `50%`,
+        maxWidth: `15rem`,
         right: `1rem`,
         bottom: `-1rem`,
         opacity: 0.25,
