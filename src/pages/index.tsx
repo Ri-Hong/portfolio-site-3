@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
   return (
     <ThemeUIProvider theme={theme}>
       <Layout
-        title={`Hello from ${siteConfig.title}`}
+        // title={`Hello from ${siteConfig.title}`}
         description="Description will go into a meta tag in <head />"
       >
         <ThemeWatcher />
